@@ -36,15 +36,22 @@
           opacity: 1;
         }
 
-        /*Move up bottom-to-top*/
+        /*Move Up: bottom-to-top*/
         .bottom-to-top {
-          /*position down 50%*/
           transform: translate(0%, 50%);
         }
         .is-visible.bottom-to-top {
-          /*bring back up on scroll*/
           transform: translate(0%, 0%);
-          transition: all 1s ease-in;
+          transition: all 1s ease-out;
+        }
+
+        /*Move Left: right-to-left*/
+        .right-to-left {
+          transform: translate(50%, 0%);
+        }
+        .is-visible.right-to-left {
+          transform: translate(0%, 0%);
+          transition: all 1.5s ease-out;
         }
 
     </style>
@@ -60,8 +67,8 @@
         <img class="inline-photo js-show-on-scroll bottom-to-top" src="fun.png">
     </section>
     <section class="d-flex flex-column align-items-center justify-content-center">
-        <h1>Hello World</h1>
-        <img class="inline-photo js-show-on-scroll" src="fun.png">
+        <h1>To the left</h1>
+        <img class="inline-photo js-show-on-scroll right-to-left" src="fun.png">
     </section>
     <section class="d-flex flex-column align-items-center justify-content-center">
         <h1>Hello World</h1>
@@ -79,8 +86,9 @@
     <script>
         // Detect request animation frame
         var scroll = window.requestAnimationFrame ||
-                     // IE Fallback
-                     function(callback){ window.setTimeout(callback, 1000/60)};
+
+         // IE Fallback
+        function(callback){ window.setTimeout(callback, 1000/60)};
         var elementsToShow = document.querySelectorAll('.js-show-on-scroll'); 
 
         function loop() {
@@ -88,10 +96,11 @@
           elementsToShow.forEach(function (element) {
             if (isElementInViewport(element)) {
               element.classList.add('is-visible');
-              //remove else if you want images to stay on page//
-            } else { 
-              element.classList.remove('is-visible');
             }
+            //add else if you want images to only appear when in view//
+            // } else { 
+            //   element.classList.remove('is-visible');
+            // }
           });
 
           scroll(loop);
