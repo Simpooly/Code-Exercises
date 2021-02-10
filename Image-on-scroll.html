@@ -54,6 +54,27 @@
           transition: all 1.5s ease-out;
         }
 
+        /*Move Right: left-to-right*/
+/*        .left-to-right {
+          transform: translate(-50%, 0%);
+        }
+        .is-visible.left-to-right {
+          transform: translate(0%, 0%);
+          transition: all 1.5s ease-out;
+        }*/
+
+        .is-visible.shake{
+            animation: shake 1s;
+        }
+        @keyframes shake {
+            0%  { transform: rotate(10deg); }
+            20% { transform: rotate(-15deg); }
+            40% { transform: rotate(10deg); }
+            60% { transform: rotate(-15deg); }
+            80% { transform: rotate(10deg); }
+            100% { transform: rotate(-15deg); }
+        }
+
     </style>
   </head>
   <body>
@@ -71,12 +92,12 @@
         <img class="inline-photo js-show-on-scroll right-to-left" src="fun.png">
     </section>
     <section class="d-flex flex-column align-items-center justify-content-center">
-        <h1>Hello World</h1>
-        <img class="inline-photo js-show-on-scroll" src="fun.png">
+        <h1>To the right</h1>
+        <img class="inline-photo js-show-on-scroll left-to-right" src="fun.png">
     </section>
     <section class="d-flex flex-column align-items-center justify-content-center">
-        <h1>Hello World</h1>
-        <img class="inline-photo js-show-on-scroll" src="fun.png">
+        <h1>Wiggle</h1>
+        <img class="inline-photo js-show-on-scroll shake" src="fun.png">
     </section>
     <section class="d-flex flex-column align-items-center justify-content-center">
         <h1>Hello World</h1>
