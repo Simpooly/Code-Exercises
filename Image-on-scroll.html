@@ -44,6 +44,14 @@
           transform: translate(0%, 0%);
           transition: all 1s ease-out;
         }
+        /*Move Up: bottom-to-top*/
+        .top-to-bottom {
+          transform: translate(0%, -50%);
+        }
+        .is-visible.top-to-bottom {
+          transform: translate(0%, 0%);
+          transition: all 1s ease-out;
+        }
 
         /*Move Left: right-to-left*/
         .right-to-left {
@@ -100,8 +108,8 @@
         <img class="inline-photo js-show-on-scroll shake" src="fun.png">
     </section>
     <section class="d-flex flex-column align-items-center justify-content-center">
-        <h1>Hello World</h1>
-        <img class="inline-photo js-show-on-scroll" src="fun.png">
+        <h1>Down on scroll</h1>
+        <img class="inline-photo js-show-on-scroll top-to-bottom" src="fun.png">
     </section>
 
     <script>
