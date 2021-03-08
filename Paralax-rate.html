@@ -1,38 +1,52 @@
-<style>
-        .wrapper {
-             margin: 0;
-             height: 100vh;
-             font-size: 5em;
-        }
-        .wrapper section {
-            height: 100%;
-        }
-        .wrapper ul {
-            list-style-type: none;
-            padding:0;
-            margin: 0;
-            display: grid;
-            grid-template-columns: repeat(3, auto);
-            justify-content: center;
-            align-items: center;
-            place-items: center;
-            height: 100vh;
-        }
-    </style>
+<html>
+  <head>
+    <title>Paralax</title>
 
-<div class="wrapper">
-    <section>
+    <!-- Bootstrap 4.3.1 Nov 1, 2020-->
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        <ul>
-            <li class="js-parallax" data-rate="2">par</li>
-            <li>al</li>
-            <li class="js-parallax" data-rate="-2">lax</li>
-        </ul>
-    </section>
-    <section></section>
-</div>
+        <!-- Jquerry for Bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            <style>
+                .wrapper {
+                     margin: 0;
+                     height: 100vh;
+                     font-size: 5em;
+                }
+                .wrapper section {
+                    height: 100%;
+                }
+                .wrapper ul {
+                    list-style-type: none;
+                    padding:0;
+                    margin: 0;
+                    display: grid;
+                    grid-template-columns: repeat(3, auto);
+                    justify-content: center;
+                    align-items: center;
+                    place-items: center;
+                    height: 100vh;
+                }
+            </style>
+  </head>
+  <body>
 
-<script type="text/javascript">
+    <div class="wrapper">
+        <section>
+
+            <ul>
+                <li class="js-parallax" data-rate="2">par</li>
+                <li>al</li>
+                <li class="js-parallax" data-rate="-2">lax</li>
+            </ul>
+        </section>
+        <section></section>
+    </div>
+
+    <script type="text/javascript">
     //do function on scroll
     window.addEventListener('scroll', function(e) {
         const target = document.querySelectorAll('.js-parallax');
@@ -50,4 +64,7 @@
         // console.log(target.style)
     });
 
-</script>
+    </script>
+
+  </body>
+</html>
