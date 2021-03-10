@@ -47,13 +47,10 @@
     </div>
 
     <script type="text/javascript">
-    //do function on scroll
     window.addEventListener('scroll', function(e) {
         const target = document.querySelectorAll('.js-parallax');
         var scrolled = window.pageYOffset;
-        // var rate = scrolled * 0.5;
 
-        // target.style.transform = 'translate3d( 0px, '+rate+'px, 0px )';
 
         var index = 0, length = target.length;
         for (index; index < length; index++){
@@ -61,7 +58,6 @@
 
             target[index].style.transform = 'translate3d( 0px, '+pos+'px, 0px )';
         }
-        // console.log(target.style)
     });
 
     </script>
