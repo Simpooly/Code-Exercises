@@ -71,6 +71,15 @@
           transition: all 1.5s ease-out;
         }
 
+        /*Move Right: diagnal-bottom-right*/
+        .diagnal-bottom-right {
+          transform: translate(50%, 50%);
+        }
+        .is-visible.diagnal-bottom-right {
+          transform: translate(0%, 0%);
+          transition: all 1.5s ease-out;
+        }
+
         .is-visible.shake{
             animation: shake 1s;
         }
@@ -111,7 +120,10 @@
         <h1>Down on scroll</h1>
         <img class="inline-photo js-show-on-scroll top-to-bottom" src="fun.png">
     </section>
-
+    <section class="d-flex flex-column align-items-center justify-content-center">
+        <h1>Diagnal bottom right</h1>
+        <img class="inline-photo js-show-on-scroll diagnal-bottom-right" src="fun.png">
+    </section>
     <script>
         // Detect request animation frame
         var scroll = window.requestAnimationFrame ||
